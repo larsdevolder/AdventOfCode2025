@@ -1,3 +1,5 @@
+# pylint: disable-msg=C0103
+
 from math import floor
 
 with open("inputs/day01.txt", encoding="utf8") as file:
@@ -6,9 +8,9 @@ with open("inputs/day01.txt", encoding="utf8") as file:
 position = 50
 timesZero = 0
 for line in puzzleInput:
+    passedZero = False
     previousPosition = position
     amount = int(line[1:])
-    passedZero = False
     if amount > 100:
         timesZero += floor(amount / 100)
     match line[0]:
@@ -25,4 +27,5 @@ for line in puzzleInput:
                 passedZero = True
     if position == 0 or passedZero:
         timesZero += 1
+
 print(timesZero)

@@ -1,3 +1,5 @@
+# pylint: disable-msg=C0103
+
 with open("inputs/day01.txt", encoding="utf8") as file:
     puzzleInput = file.readlines()
 
@@ -15,4 +17,5 @@ for line in puzzleInput:
     position %= 100
     if position == 0:
         timesZero += 1
+
 print(timesZero)
