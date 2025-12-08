@@ -1,10 +1,10 @@
 import numpy as np
 
-diagram = []
+diagram_list = []
 with open("inputs/day07/input.txt", encoding="utf8") as file:
     for line in file.readlines():
-        diagram.append(list(line.strip()))
-diagram = np.array(diagram).T
+        diagram_list.append(list(line.strip()))
+diagram = np.array(diagram_list).T
 
 used_splitters = set()
 def beam(x, y):
